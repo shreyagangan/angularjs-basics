@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controllers - $scope object </title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <div  ng-controller="GreetingController">
+        {{greeting}}
+    </div>
+
+    <div ng-controller="DoubleController">
+        Two times <input ng-model="num"> equals {{double(num)}}
+    </div>
+</body>
+<script src="controller4.js"></script>
+</html>

@@ -5,28 +5,17 @@
     <title>Weather Forecast</title>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 </head>
-<body  ng-app="weatherApp">
-<div ng-controller="UserLocation">
-    <form novalidate class="location-form">
-        <input type="text" ng-model="user.location" placeholder="Enter Zip or Address"/>
-        <input type="submit" ng-click="update(user)" value="Save"/>
-    </form>
-    <pre>location = {{user | json}}</pre>
+<body>
+<div ng-app="weatherApp" ng-controller="UserLocation as user">
+    <input type="text" ng-model="user.location" placeholder="Enter Zip or Address"/>
+    <button class="btn" ng-click="user.locate()">Enter</button>
+    <!--pre>location = {{user | json}}</pre-->
 </div>
 
-<div ng-controller="UserLocation2 as user2">
-    <input type="text" ng-model="user2.location" placeholder="Enter Zip or Address"/>
-    <button class="btn" ng-click="user2.locate()">Enter</button>
-</div>
+
 
 </body>
-<script>
-    angular.module('weatherApp', [])
-            .controller('UserLocation', ['$scope', function($scope) {
-                $scope.master = {};
-                $scope.update = function(user) {
-                    $scope.master = angular.copy(user);
-                };
-            }]);
-</script>
+<script src="weather-script-controller.js"></script>
+<script src="weather-script-service.js"></script>
+
 </html>

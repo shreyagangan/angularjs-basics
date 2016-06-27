@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reading JSON</title>
+    <!--script-- src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+</head>
+<body>
+    <!--div-- ng-app="readJ" ng-controller="readJController as reader">
+        <button class="btn" ng-click="reader.readWeather()">Read</button>
+    </--div-->
+</body>
+<script>
+/*
+
+ $(function() {
+ var people = [];
+ $.getJSON('people.json', function(data) {
+ $.each(data.person, function(i, f) {
+ var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+ "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+ $(tblRow).appendTo("#userdata tbody");
+ });
+ });
+ });
+
+
+ {
+ "person": [
+ {
+ "firstName": "Clark",
+ "lastName": "Kent",
+ "job": "Reporter",
+ "roll": 20
+ },
+ {
+ "firstName": "Bruce",
+ "lastName": "Wayne",
+ "job": "Playboy",
+ "roll": 30
+ },
+ {
+ "firstName": "Peter",
+ "lastName": "Parker",
+ "job": "Photographer",
+ "roll": 40
+ }
+ ]
+ }
+*/
+
+    $(function() {
+        var temperature, windSpeed, humidity, weather;
+        $.getJSON('losangeles.json', function(data) {
+            temperature = data.list[0].main.temp;//Convert Kelvin to F later!//['main'].temp;
+            humidity=data.list[0].main.humidity;
+            weather=data.list[0].weather[0].main;
+            windSpeed = data.list[0].wind.speed;
+            //window.alert(temperature);
+            console.log(temperature);
+            console.log(humidity);
+            console.log(weather);
+            console.log(windSpeed);
+            /*$.each(data.list[main].temp, function(i, f) {
+                var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+                        "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+                $(tblRow).appendTo("#userdata tbody");
+            });*/
+
+        });
+
+    });
+
+</script>
+</html>
