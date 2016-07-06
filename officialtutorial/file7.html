@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Controllers</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="MyController">
+    </div>
+    <div class="familyTree">
+        <div ng-controller="MainController">
+            <p>Good {{timeOfDay}}, {{name}}!</p>
+            <div ng-controller="ChildController">
+                <p>Good {{timeOfDay}}, {{name}}!</p>
+                <div ng-controller="GrandChildController">
+                    <p>Good {{timeOfDay}}, {{name}}!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="controller7.js"></script>
+</html>

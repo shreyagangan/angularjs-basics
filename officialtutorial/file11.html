@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope Event Propagation</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="propagationApp">
+<div ng-controller="EventController">
+    Root scope <b>MyEvent</b> count: {{count}}
+    <ul>
+        <!-- i in [1] is effectively a for loop -->
+        <li ng-repeat="i in [1]" ng-controller="EventController">
+            <button ng-click="$emit('MyEvent')">$emit('MyEvent')</button>
+            <button ng-click="$broadcast('MyEvent')">$broadcast('MyEvent')</button>
+            <br>
+            Middle scope <b>MyEvent</b> count: {{count}}
+            <ul>
+                <!-- item in [1,2] is effectively a for loop -->
+                <li ng-repeat="item in [1, 2]" ng-controller="EventController">
+                    Leaf scope <b>MyEvent</b> count: {{count}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="controller11.js"></script>
+</html>
