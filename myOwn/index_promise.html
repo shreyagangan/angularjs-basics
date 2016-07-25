@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Promise - Asychronous Calls</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
-<body>
-
+<body ng-app="weatherPromiseApp" ng-controller="weatherController">
+<button ng-click="getWeatherReport('mumbai')">Enter</button>
 </body>
+<script src="controller_promise.js"></script>
 </html>

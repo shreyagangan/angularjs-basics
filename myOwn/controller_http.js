@@ -8,7 +8,7 @@
             $scope.readJSON=function(){
                $http.get('losangeles.json').success(function(data, status, headers, config) {
                    $scope.localWeatherReport= data;
-               });;
+               });
             };
 
             $scope.readfromURL=function(){

@@ -57,6 +57,15 @@ file12-heroDetail.html
 controller12.js
 component12.js
 
+#Animations
+#Basic Animation - ngShow, ngHide
+file13.html
+animation13.css
+file14.html
+animation14.css
+
+
+
 -------------------------------------
 ##Tutorial Point [tutorialpoint]
 
@@ -73,8 +82,11 @@ index.html
 controller.html
 service.html - service
 
+#controller -> service -> factory
+
+
 -------------------------------------
-#My Own Programs
+## My Own Programs
 
 #Use http Service to read JSON
 index_http.html
@@ -106,3 +118,20 @@ weatherApp.js
 #view appear on click
 index_view.html
 controller_view.js
+
+#Asynchronous Calls - Promise
+index_promise.html
+controller_promise.js
+
+#Routing Views - Basic 
+[myOwn/routing]
+index_route.html
+script_route.js
+stylesheet_route.css
+[myOwn/routing/templates]
+
+#Blinking
+index_blink.html
+
+#SearchBox - Form submit
+ [search-form]
