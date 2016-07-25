@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using Services</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="myServiceModule">
+    <div id="simple" ng-controller="MyController">
+        <p>  Let's try this simple <b>notify service</b>, injected into the controller... </p>
+        <input ng-init="message='Hello!'" ng-model="message">
+        <button ng-click="callNotify(message);">NOTIFY</button>
+        <p>(Click Thrice to see alert!)</p>
+    </div>
+</body>
+<script src="controller8.js"></script>
+<script src="testing8.js"></script>
+</html>

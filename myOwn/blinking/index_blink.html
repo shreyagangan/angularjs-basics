@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blinking</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="blink">
+    <blink>I am back!</blink>
+</div>
+</body>
+<script>
+    var blink = angular.module('blink', [])
+            .directive('blink', function($timeout) {
+                return {
+                    restrict: 'E',
+                    transclude: true,
+                    scope: {},
+                    controller: function($scope, $element) {
+                        var count=0;
+                        function showElement() {
+                            $element.css("display", "inline");
+                            $timeout(hideElement, 1000);
+                        }
+
+                        function hideElement() {
+                            if(count>1)
+                            {
+                                return;
+                            };
+                            $element.css("display", "none");
+                            $timeout(showElement, 1000);
+                            console.log(count);
+                            count++;
+                        }
+                        showElement();
+                    },
+                    template: '<span ng-transclude></span>',
+                    replace: true
+                };
+            });
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component - Create and Configure</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="controller12.js"></script>
+    <script src="component12.js"></script>
+</head>
+<body ng-app="heroApp">
+    <div ng-controller="mainCtrl as ctrl">
+        <b>Hero</b><br>
+        <!--hero-detail is the name of the component-->
+        <hero-detail hero="ctrl.hero"></hero-detail>
+    </div>
+</body>
+
+</html>

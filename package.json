@@ -1,0 +1,23 @@
+{
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "#1. Data Binding: Directives file0.html",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shreyagangan/weather-forecast.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shreyagangan/weather-forecast/issues"
+  },
+  "homepage": "https://github.com/shreyagangan/weather-forecast#readme",
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "^1.5.7"
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weatherDay - Get Day from Date</title>
+</head>
+<body>
+<p>Click the button to display todays day of the week.</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var d = new Date("2016-07-28 00:00:00");
+        var n = d.getDay();
+        var daymap={0:"Sunday", 1:"Monday", 2:"Tuesday", 3:"Wednesday", 4:"Thursday", 5:"Friday", 6:"Saturday"};
+        document.getElementById("demo").innerHTML = daymap[n];
+    }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Animation - ngShow, ngHide</title>
+    <link href="animation13.css" rel="stylesheet" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+</head>
+<body ng-app="ngAnimate">
+<div ng-init="checked=true" ng-controller="ExampleController">
+    <label>
+        <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> Is Visible...
+    </label>
+    <div class="check-element sample-show-hide" ng-show="checked" style="clear:both;">
+        Visible...
+    </div>
+
+    <div ng-repeat="item in items" class="repeated-item">
+        {{ item.id }}
+    </div>
+
+</div>
+</body>
+<script>
+    angular.module('ngAnimate', [])
+            .controller('ExampleController', ['$scope', function($scope) {
+                $scope.items = [{'id':"s01", 'name':"Adele"}, {'id':"s02", 'name':"Rihanna"}];
+            }]);
+</script>
+</html>

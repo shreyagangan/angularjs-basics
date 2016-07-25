@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP - Reading JSON</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="httpApp">
+    <div ng-controller="jsonController">
+        <button ng-click="readJSON()">Read Local JSON</button>
+        <p>{{localWeatherReport|json}}</p>
+        <br>
+        <hr>
+        <br>
+        <input ng-model="city" placeholder="Enter City">
+        <button ng-click="readfromURL()">Enter</button>
+        <p>{{weatherReport|json}}</p>
+    </div>
+</body>
+<script src="controller_http.js"></script>
+</html>

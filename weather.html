@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="weatherApp" ng-controller="UserLocation as user">
+    <input type="text" ng-model="user.location" placeholder="Enter Zip or Address"/>
+    <button class="btn" ng-click="user.locate()">Enter</button>
+    <!--pre>location = {{user | json}}</pre-->
+</div>
+
+
+
+</body>
+<script src="weather-script-controller.js"></script>
+<script src="weather-script-service.js"></script>
+
+</html>
